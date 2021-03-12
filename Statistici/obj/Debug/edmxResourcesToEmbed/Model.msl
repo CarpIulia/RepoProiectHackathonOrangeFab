@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RatbvModelStoreContainer" CdmEntityContainer="RatbvEntities">
+    <EntitySetMapping Name="TemperaturaPoianaBrasovs">
+      <EntityTypeMapping TypeName="RatbvModel.TemperaturaPoianaBrasov">
+        <MappingFragment StoreEntitySet="TemperaturaPoianaBrasov">
+          <ScalarProperty Name="data_masurare" ColumnName="data_masurare" />
+          <ScalarProperty Name="minim" ColumnName="minim" />
+          <ScalarProperty Name="maxim" ColumnName="maxim" />
+          <ScalarProperty Name="t_id" ColumnName="t_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Validaris">
+      <EntityTypeMapping TypeName="RatbvModel.Validari">
+        <MappingFragment StoreEntitySet="Validari">
+          <ScalarProperty Name="Titlu_calatorie" ColumnName="Titlu_calatorie" />
+          <ScalarProperty Name="Tip_Abonament" ColumnName="Tip_Abonament" />
+          <ScalarProperty Name="Auto" ColumnName="Auto" />
+          <ScalarProperty Name="Data_validarii" ColumnName="Data_validarii" />
+          <ScalarProperty Name="Ziua" ColumnName="Ziua" />
+          <ScalarProperty Name="Nr_inmatriculare" ColumnName="Nr_inmatriculare" />
+          <ScalarProperty Name="Ora" ColumnName="Ora" />
+          <ScalarProperty Name="v_id" ColumnName="v_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

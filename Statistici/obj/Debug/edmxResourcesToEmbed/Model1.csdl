@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RATBVModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TemperaturaBrasov">
+    <Key>
+      <PropertyRef Name="t_id" />
+    </Key>
+    <Property Name="t_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="data_masurare" Type="DateTime" Precision="0" />
+    <Property Name="minim" Type="Int32" />
+    <Property Name="maxim" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TemperaturaPoianaBrasov">
+    <Key>
+      <PropertyRef Name="t_id" />
+    </Key>
+    <Property Name="t_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="data_masurare" Type="DateTime" Precision="0" />
+    <Property Name="minim" Type="Int32" />
+    <Property Name="maxim" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Validari">
+    <Key>
+      <PropertyRef Name="v_id" />
+    </Key>
+    <Property Name="Titlu_calatorie" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Tip_Abonament" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Auto" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Data_validarii" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Ziua" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Nr_inmatriculare" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Ora" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="v_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityContainer Name="RATBVEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TemperaturaBrasovs" EntityType="Self.TemperaturaBrasov" />
+    <EntitySet Name="TemperaturaPoianaBrasovs" EntityType="Self.TemperaturaPoianaBrasov" />
+    <EntitySet Name="Validaris" EntityType="Self.Validari" />
+  </EntityContainer>
+</Schema>

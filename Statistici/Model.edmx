@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="RatbvModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TemperaturaPoianaBrasov">
+          <Key>
+            <PropertyRef Name="t_id" />
+          </Key>
+          <Property Name="data_masurare" Type="nvarchar" MaxLength="255" />
+          <Property Name="minim" Type="float" />
+          <Property Name="maxim" Type="float" />
+          <Property Name="t_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Validari">
+          <Key>
+            <PropertyRef Name="v_id" />
+          </Key>
+          <Property Name="Titlu_calatorie" Type="nvarchar" MaxLength="255" />
+          <Property Name="Tip_Abonament" Type="nvarchar" MaxLength="255" />
+          <Property Name="Auto" Type="nvarchar" MaxLength="255" />
+          <Property Name="Data_validarii" Type="nvarchar" MaxLength="255" />
+          <Property Name="Ziua" Type="nvarchar" MaxLength="255" />
+          <Property Name="Nr_inmatriculare" Type="nvarchar" MaxLength="255" />
+          <Property Name="Ora" Type="nvarchar" MaxLength="255" />
+          <Property Name="v_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="RatbvModelStoreContainer">
+          <EntitySet Name="TemperaturaPoianaBrasov" EntityType="Self.TemperaturaPoianaBrasov" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Validari" EntityType="Self.Validari" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RatbvModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TemperaturaPoianaBrasov">
+          <Key>
+            <PropertyRef Name="t_id" />
+          </Key>
+          <Property Name="data_masurare" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="minim" Type="Double" />
+          <Property Name="maxim" Type="Double" />
+          <Property Name="t_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="Validari">
+          <Key>
+            <PropertyRef Name="v_id" />
+          </Key>
+          <Property Name="Titlu_calatorie" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Tip_Abonament" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Auto" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Data_validarii" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Ziua" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Nr_inmatriculare" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Ora" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="v_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityContainer Name="RatbvEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TemperaturaPoianaBrasovs" EntityType="Self.TemperaturaPoianaBrasov" />
+          <EntitySet Name="Validaris" EntityType="Self.Validari" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RatbvModelStoreContainer" CdmEntityContainer="RatbvEntities">
+          <EntitySetMapping Name="TemperaturaPoianaBrasovs">
+            <EntityTypeMapping TypeName="RatbvModel.TemperaturaPoianaBrasov">
+              <MappingFragment StoreEntitySet="TemperaturaPoianaBrasov">
+                <ScalarProperty Name="data_masurare" ColumnName="data_masurare" />
+                <ScalarProperty Name="minim" ColumnName="minim" />
+                <ScalarProperty Name="maxim" ColumnName="maxim" />
+                <ScalarProperty Name="t_id" ColumnName="t_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Validaris">
+            <EntityTypeMapping TypeName="RatbvModel.Validari">
+              <MappingFragment StoreEntitySet="Validari">
+                <ScalarProperty Name="Titlu_calatorie" ColumnName="Titlu_calatorie" />
+                <ScalarProperty Name="Tip_Abonament" ColumnName="Tip_Abonament" />
+                <ScalarProperty Name="Auto" ColumnName="Auto" />
+                <ScalarProperty Name="Data_validarii" ColumnName="Data_validarii" />
+                <ScalarProperty Name="Ziua" ColumnName="Ziua" />
+                <ScalarProperty Name="Nr_inmatriculare" ColumnName="Nr_inmatriculare" />
+                <ScalarProperty Name="Ora" ColumnName="Ora" />
+                <ScalarProperty Name="v_id" ColumnName="v_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RatbvModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TemperaturaPoianaBrasov">
+    <Key>
+      <PropertyRef Name="t_id" />
+    </Key>
+    <Property Name="data_masurare" Type="nvarchar" MaxLength="255" />
+    <Property Name="minim" Type="float" />
+    <Property Name="maxim" Type="float" />
+    <Property Name="t_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Validari">
+    <Key>
+      <PropertyRef Name="v_id" />
+    </Key>
+    <Property Name="Titlu_calatorie" Type="nvarchar" MaxLength="255" />
+    <Property Name="Tip_Abonament" Type="nvarchar" MaxLength="255" />
+    <Property Name="Auto" Type="nvarchar" MaxLength="255" />
+    <Property Name="Data_validarii" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ziua" Type="nvarchar" MaxLength="255" />
+    <Property Name="Nr_inmatriculare" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ora" Type="nvarchar" MaxLength="255" />
+    <Property Name="v_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="RatbvModelStoreContainer">
+    <EntitySet Name="TemperaturaPoianaBrasov" EntityType="Self.TemperaturaPoianaBrasov" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Validari" EntityType="Self.Validari" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
